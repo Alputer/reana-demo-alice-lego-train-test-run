@@ -1,5 +1,5 @@
 # This file is part of REANA.
-# Copyright (C) 2020 CERN.
+# Copyright (C) 2020, 2022 CERN.
 #
 # REANA is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
@@ -18,7 +18,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: 2.7
+          python-version: 3.8
 
       - name: Install Python dependencies
         run: |
@@ -27,4 +27,4 @@ jobs:
 
       - name: Validate workflow specification file
         run: |
-          reana-client validate | grep -q ' is a valid '
+          reana-client validate

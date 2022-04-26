@@ -6,25 +6,20 @@
 
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 7 * * 1"
 
 jobs:
-  build-docker:
+  validate:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Python
-        uses: actions/setup-python@v2
+      - name: Validate workflow spec
+        uses: reanahub/reana-github-actions/local-validate@v1
         with:
-          python-version: 3.8
-
-      - name: Install Python dependencies
-        run: |
-          pip install --upgrade pip
-          pip install reana-client
-
-      - name: Validate workflow specification file
-        run: |
-          reana-client validate
+          reana_specs: reana.yaml

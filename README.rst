@@ -44,7 +44,7 @@ large)
 
    $ mkdir -p __alice__data__2010__LHC10h_2__000139038
    $ cd __alice__data__2010__LHC10h_2__000139038
-   $ wget http://opendata.cern.ch/record/1102/files/assets/alice/2010/LHC10h/000139038/ESD/0003/AliESDs.root
+   $ curl -O http://opendata.cern.ch/record/1102/files/assets/alice/2010/LHC10h/000139038/ESD/0003/AliESDs.root
    $ cd ..
 
 Note that ``data.txt`` file should contain the path to the downloaded sample
@@ -146,7 +146,7 @@ follows:
    +----------------------------------------+
    | (1) download ESD input data file       |
    |                                        |
-   |    $ wget http://opendata.cern.ch/...  |
+   |  $ curl -O http://opendata.cern.ch/... |
    +----------------------------------------+
                |
                | ALIESD.root
@@ -271,7 +271,7 @@ workflow steps and expected outputs:
           - environment: 'reanahub/reana-env-aliphysics:vAN-20180614-1'
             commands:
             - 'mkdir -p __alice__data__2010__LHC10h_2__000139038/'
-            - 'wget http://opendata.cern.ch/record/1102/files/assets/alice/2010/LHC10h/000139038/ESD/0003/AliESDs.root'
+            - 'curl -fsOS --retry 9 http://opendata.cern.ch/record/1102/files/assets/alice/2010/LHC10h/000139038/ESD/0003/AliESDs.root'
             - 'mv AliESDs.root __alice__data__2010__LHC10h_2__000139038/'
             - 'source fix-env.sh && source env.sh && aliroot -b -q generate.C | tee generation.log 2> generation.err'
             - 'source fix-env.sh && source env.sh && export ALIEN_PROC_ID=12345678 && source ./lego_train.sh | tee stdout 2> stderr'

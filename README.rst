@@ -92,7 +92,7 @@ some wanted AliPhysics version from Docker Hub:
 
 .. code-block:: console
 
-   $ docker pull reanahub/reana-env-aliphysics:vAN-20180614-1
+   $ docker pull docker.io/reanahub/reana-env-aliphysics:vAN-20180614-1
 
 We shall use the ``vAN-20180614-1`` version for the present example.
 
@@ -268,7 +268,7 @@ workflow steps and expected outputs:
       type: serial
       specification:
         steps:
-          - environment: 'reanahub/reana-env-aliphysics:vAN-20180614-1'
+          - environment: 'docker.io/reanahub/reana-env-aliphysics:vAN-20180614-1'
             commands:
             - 'mkdir -p __alice__data__2010__LHC10h_2__000139038/'
             - 'curl -fsOS --retry 9 http://opendata.cern.ch/record/1102/files/assets/alice/2010/LHC10h/000139038/ESD/0003/AliESDs.root'

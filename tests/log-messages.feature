@@ -8,7 +8,7 @@ Feature: Log messages
 
     Scenario: The data fetching steps have produced the expected messages
         When the workflow is finished
-        Then the engine logs should contain "Publishing step:0, cmd: curl -fsOS --retry 9 http://opendata.cern.ch/record/1102/files/assets/alice/2010/LHC10h/000139038/ESD/0003/AliESDs.root"
+        Then the engine logs should contain "Publishing step:0, cmd: curl -fsOS --retry 9 http://opendata.cern.ch/eos/opendata/alice/2010/LHC10h/000139038/ESD/0003/AliESDs.root"
 
     Scenario: The generation step has produced the expected messages
         When the workflow is finished

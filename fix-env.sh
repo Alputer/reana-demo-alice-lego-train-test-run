@@ -1,3 +1,4 @@
+#!/bin/bash
 export G4LEVELGAMMADATA=/cvmfs/alice.cern.ch/el5-x86_64/Packages/GEANT4/v4.10.01.p03-alice1-3/share/Geant4-10.1.3/data/PhotonEvaporation3.1
 export G4VMCINSTALL=/cvmfs/alice.cern.ch/x86_64-2.6-gnu-4.1.2/Packages/GEANT4_VMC/v3-2-p2-alice1-5
 export ALIEN_RUNTIME_ROOT=/cvmfs/alice.cern.ch/x86_64-2.6-gnu-4.1.2/Packages/AliEn-Runtime/v2-19-le-39

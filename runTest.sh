@@ -5,6 +5,7 @@ then
   echo "ERROR: env.sh not found."
   exit 3
 fi
+# shellcheck disable=SC1091
 source env.sh
 
 if [ ! -e "generate.C" ]

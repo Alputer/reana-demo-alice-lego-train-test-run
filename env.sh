@@ -1,3 +1,4 @@
+#!/bin/bash
 export ALIROOT_VERSION='VO_ALICE@AliPhysics::vAN-20180614-1'
 export PERIOD_NAME='LHC10h_test'
 export TRAIN_ID='1'

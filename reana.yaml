@@ -27,3 +27,8 @@ workflow:
 outputs:
   files:
    - plot.pdf
+tests:
+  files:
+    - tests/log-messages.feature
+    - tests/run-duration.feature
+    - tests/workspace-files.feature
